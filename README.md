@@ -50,13 +50,17 @@ A focused review documented the AWS-managed `AccountFullAccessRole` configuratio
 
 **Detailed report:** [IAM account access review](evidence/iam-account-access-review.md)
 
-## Security Controls Observed
+## S3 Configuration Observations
+
+The following S3 configurations were recorded as observed during the lab:
 
 - S3 Block Public Access enabled.
 - S3 Object Ownership set to Bucket owner enforced, with ACLs disabled.
 - Default S3 server-side encryption using SSE-S3.
 - S3 bucket versioning enabled.
 - IAM permissions restricted to the intended lab bucket and its objects.
+
+**Evidence limitation:** The current public repository includes screenshots for the IAM read-only policy and denied upload test, but does not include supporting screenshots for Block Public Access, Object Ownership, default encryption, or versioning. Those configuration statements are therefore documented lab observations, not independently verifiable from the currently published screenshot set. Add sanitized screenshots if available, or retain this qualification.
 
 ## Repository Structure
 
