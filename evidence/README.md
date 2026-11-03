@@ -22,13 +22,20 @@ See [iam-account-access-review.md](iam-account-access-review.md). The review is 
 
 ## S3 Security Controls
 
-The lab documentation records the following S3 configuration observations:
+The following AWS console screenshots document the S3 security configuration:
 
-- S3 Block Public Access
-- Default server-side encryption using SSE-S3
-- Bucket versioning
-- Object Ownership set to Bucket owner enforced, with ACLs disabled
+- [Permissions and Security Settings](s3-permissions-security-settings-redacted.png)
+  - Block Public Access enabled.
+  - Bucket owner enforced.
+  - ACLs disabled.
 
-**Publication status:** Supporting screenshots for these S3 configuration settings are not currently present in this repository. The two published S3 screenshots support the IAM policy configuration and denied upload test only. Do not treat the configuration observations above as independently verified by the current screenshot set. Add sanitized console screenshots if they are available; otherwise retain the qualification in the project README.
+- [Properties, Encryption and Versioning](s3-properties-encryption-versioning-redacted.png)
+  - Bucket versioning enabled.
+  - Default SSE-S3 encryption.
+  - Bucket Key enabled.
+
+These screenshots are point-in-time configuration evidence.
+
+S3 object-level CloudTrail data events were not enabled during this lab. CloudTrail observations are therefore limited to the management events documented in the relevant investigation report.
 
 Sensitive credentials, secret keys, session tokens, MFA secrets, account identifiers, and unnecessary personal information must not be published. Sanitize screenshots and event exports before adding them to the public repository.
