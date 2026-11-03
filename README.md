@@ -50,17 +50,24 @@ A focused review documented the AWS-managed `AccountFullAccessRole` configuratio
 
 **Detailed report:** [IAM account access review](evidence/iam-account-access-review.md)
 
-## S3 Configuration Observations
+## S3 Configuration and Security Controls
 
-The following S3 configurations were recorded as observed during the lab:
+The following S3 security configurations were applied and captured in the AWS console during the lab:
 
 - S3 Block Public Access enabled.
-- S3 Object Ownership set to Bucket owner enforced, with ACLs disabled.
-- Default S3 server-side encryption using SSE-S3.
+- Object Ownership set to Bucket owner enforced, with ACLs disabled.
+- Default server-side encryption using SSE-S3.
 - S3 bucket versioning enabled.
-- IAM permissions restricted to the intended lab bucket and its objects.
+- S3 Bucket Key enabled.
 
-**Evidence limitation:** The current public repository includes screenshots for the IAM read-only policy and denied upload test, but does not include supporting screenshots for Block Public Access, Object Ownership, default encryption, or versioning. Those configuration statements are therefore documented lab observations, not independently verifiable from the currently published screenshot set. Add sanitized screenshots if available, or retain this qualification.
+### Configuration Evidence
+
+- [S3 Permissions and Security Settings](evidence/s3-permissions-security-settings-redacted.png)
+- [S3 Properties, Encryption and Versioning](evidence/s3-properties-encryption-versioning-redacted.png)
+
+The screenshots document the configuration state at the time of capture. They are point-in-time evidence and do not establish that the settings remained unchanged afterward.
+
+S3 object-level CloudTrail data events were not enabled during this exercise. Consequently, the lab does not claim CloudTrail evidence of individual object reads, uploads, or deletions.
 
 ## Repository Structure
 
@@ -68,7 +75,7 @@ The following S3 configurations were recorded as observed during the lab:
 - `evidence/README.md` — index of evidence and publication guidance.
 - `evidence/iam-least-privilege-policy.md` — redacted policy configuration, test results, CloudTrail observations, and cleanup notes.
 - `evidence/iam-account-access-review.md` — account-access role and selected console sign-in review, including limitations and follow-up actions.
-- `evidence/` — selected screenshots or sanitized evidence, where appropriate.
+- `evidence/` — selected screenshots and sanitized evidence.
 
 ## Scope and Limitations
 
