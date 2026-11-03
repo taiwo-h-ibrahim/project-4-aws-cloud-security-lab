@@ -11,6 +11,8 @@ This directory contains selected screenshots and reports supporting the AWS Clou
 
 See [iam-least-privilege-policy.md](iam-least-privilege-policy.md) for the test procedure and results.
 
+Supplementary policy and CLI evidence notes are retained in [hti-s3-least-privilege-evidence.md](hti-s3-least-privilege-evidence.md). The report above is the primary investigation record.
+
 ## IAM Account Access Review
 
 - Review of the AWS-managed `AccountFullAccessRole` permissions and trust relationship
